@@ -47,3 +47,14 @@ menu_item.forEach((item) => {
   });
 
 
+
+function sendEmail() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // You can implement your logic to send an email using a service or server-side code here
+    // For example, you can use the 'window.location' to create a mailto link
+    var mailtoLink = `mailto:youcefg1a@gmail.com?subject=New Email from ${name}&body=${message}`;
+    window.location.href = mailtoLink;
+}
