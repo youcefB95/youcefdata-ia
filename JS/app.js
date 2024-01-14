@@ -42,13 +42,13 @@ menu_item.forEach((item) => {
   }
 
   document.getElementById("downloadLink").addEventListener("click", function(event) {
-    event.preventDefault(); 
-    downloadCV(); 
+    event.preventDefault();
+    downloadCV();
   });
 
 
 
-function sendEmail() {
+function senddEmail() {
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
     var message = document.getElementById('message').value;
@@ -58,3 +58,30 @@ function sendEmail() {
     var mailtoLink = `mailto:youcefg1a@gmail.com?subject=New Email from ${name}&body=${message}`;
     window.location.href = mailtoLink;
 }
+
+
+function sendEmail(){
+
+	  var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+	var messageBody = "Name => " + name + "<br/> email =>  " + email +
+	"<br/> Message =>  " + message ;
+	Email.send({
+        SecureToken : "875ae71a-5735-462b-b840-24daa29a9f41",
+        To : "youcefg1a@gmail.com",
+        From : "youcefg1a@gmail.com",
+        Subject : "[PORTFOLIO - DATA] Contact / Informations",
+        Body : messageBody
+    }).then(
+        message => {
+        	if(message=='OK'){
+        		swal("Successful", "You clicked the button!", "success");
+        	}
+        	else{
+        		swal("Error", "You clicked the button!", "error");
+        	}
+        }
+      );
+      }

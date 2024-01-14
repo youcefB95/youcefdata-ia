@@ -9,6 +9,9 @@
     <link rel="icon" href=
             "img/y_logo.jpg"
           type="image/x-icon">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
 
     <title>Youcef B.</title>
 </head>
@@ -455,37 +458,39 @@
 
 <!-- Contact Section -->
 <section id="contact">
+
     <div class="contact container">
         <div>
             <h1 class="section-title">Contact <span>info</span></h1>
         </div>
-        <div class="contact-items">
-            <!--<div class="contact-item">
+      <!--  <div class="contact-items">
+            &lt;!&ndash;<div class="contact-item">
               <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
               <div class="contact-info">
                 <h1>Phone</h1>
                 <h2>+212 6 56 15 58 67</h2>
                 <h2>+212 7 14 38 22 16</h2>
 
-              </div>-->
-        </div>
+              </div>&ndash;&gt;
+        </div>-->
         <div class="contact-item">
             <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png"/></div>
 
-            <form action="mailto:youcefg1a@gmail.com" method="POST" enctype="text/plain" class="contact__form grid">
+
+            <form onsubmit="sendEmail(); reset(); return false;" enctype="text/plain" class="contact__form grid">
                 <div class="contact__inputs grid">
                     <div class="contact__content">
-                        <label for="name" class="contact__label">Name</label>
-                        <input type="text" id="Name" name="Name" class="contact__input" required>
+                        <label for="name" class="contact__label"><p>Name </p></label>
+                        <input type="text" id="name" name="Name" class="contact__input" required>
                     </div>
                     <div class="contact__content">
-                        <label for="email" class="contact__label">Email</label>
-                        <input type="email" id="Email" name="Email" class="contact__input" required>
+                        <label for="email" class="contact__label"><p>Email</p></label>
+                        <input type="email" id="email" name="Email" class="contact__input" required>
                     </div>
                 </div>
                 <div class="contact__content">
-                    <label for="Message" class="contact__label">Message</label>
-                    <textarea id="Message" name="Message" cols="0" rows="7" class="contact__input" maxlength="3000"
+                    <label for="Message" class="contact__label"><p>Message</p></label>
+                    <textarea id="message" name="Message" cols="0" rows="10" class="contact__input" maxlength="3000"
                               required></textarea>
                 </div>
 
@@ -494,16 +499,17 @@
                         Send Message
                         <i class="uil uil-message button__icon"></i>
                     </button>
+
+
                 </div>
             </form>
 
 
-            <!--<div class="contact-info">
-              <h1>Email</h1>
-              <h2>aymanemaghouti16@gmail.com</h2>
-              <h2>aymanemaghouti@gmail.com</h2>
-            </div> -->
         </div>
+
+        <script src="JS/app.js"></script>
+
+
         <!--  <div class="contact-item">
             <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
             <div class="contact-info">
@@ -512,7 +518,7 @@
             </div>
           </div>-->
     </div>
-    </div>
+
 </section>
 <!-- End Contact Section -->
 
@@ -548,7 +554,7 @@
     </div>
 </section>
 <!-- End Footer -->
-<script src="JS/app.js"></script>
+
 
 
 </body>

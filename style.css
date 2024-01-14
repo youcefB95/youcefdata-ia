@@ -3,7 +3,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-} 
+}
 html {
 	font-size: 10px;
 	font-family: 'Poppins', sans-serif;
@@ -378,13 +378,16 @@ p {
 /* contact Section */
 #contact .contact {
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1500px;
 	margin: 0 auto;
 	width: 90%;
 }
 #contact .contact-items {
 	width: 100%;
 }
+
+
+
 #contact .contact-item {
 	width: 80%;
 	padding: 20px;
